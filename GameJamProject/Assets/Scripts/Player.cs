@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 
     private void Fire(Vector2 targetPosition)
     {
+        GameController.Instance.onGunFiredAction.Invoke(targetPosition);
         // via GameController _targetManager.checkHit(mousePos2D);
         // play sound
     }
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
             _leftGunVisual.SetActive(true);
             _rightGunVisual.SetActive(false);
             Vector3 pos = _leftGunVisual.transform.position;
+            
             _leftGunVisual.transform.position = new Vector3(targetPosition.x, pos.y, pos.z);
         }
         else

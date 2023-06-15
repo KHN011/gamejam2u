@@ -29,6 +29,7 @@ public class CatSpawner : MonoBehaviour
             Transform tr = _spawnPoints[index];
             Cat c = Instantiate(cPref, transform);
             c.transform.SetPositionAndRotation(tr.position, tr.rotation);
+            GameController.Instance.addTarget(c);
 
             if (false)
             {

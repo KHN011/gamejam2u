@@ -19,6 +19,7 @@ public class Target : MonoBehaviour
     public void onShooted()
     {
         // it deads
+        GetComponent<AudioSource>().Play();
     }
     
     private void Update()

@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
 
     private TargetManager _targetManager = null;
 
+    public System.Action<Vector2> onGunFiredAction;
+
     private void Awake()
     {
         
@@ -37,6 +39,7 @@ public class GameController : MonoBehaviour
     private void init()
     {
         _targetManager = new TargetManager();
+        onGunFiredAction += onGunFired;
     }
 
     public void startGame()
@@ -49,9 +52,13 @@ public class GameController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void onGunFired(Vector2 bulletPos)
     {
-        
+        _targetManager.checkHit(bulletPos);
+    }
+
+    public void addTarget(Target t)
+    {
+        _targetManager.createTarget(t);
     }
 }
