@@ -6,13 +6,16 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance = null;
 
+    [SerializeField] private CatSpawner _catSpawner;
+
+
 
     private TargetManager _targetManager = null;
 
     private void Awake()
     {
-        /*
-        if (Instance != this)
+        
+        if (Instance != this && Instance != null)
         {
             DestroyImmediate(this.gameObject);
         }
@@ -23,13 +26,12 @@ public class GameController : MonoBehaviour
 
             
         }
-        */
         init();
     }
 
     private void Start()
     {
-        
+        startGame();   
     }
 
     private void init()
@@ -39,7 +41,7 @@ public class GameController : MonoBehaviour
 
     public void startGame()
     {
-
+        _catSpawner.startSpawnCats();
     }
 
     public void endGame()

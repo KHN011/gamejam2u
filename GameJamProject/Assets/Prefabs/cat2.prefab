@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9222162753479687658}
   - component: {fileID: 6881299385988780513}
   m_Layer: 0
-  m_Name: cat
+  m_Name: cat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5581b7721fb365e43a227e3e6114252c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc6b1ad7751b69942822210a91548074, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
