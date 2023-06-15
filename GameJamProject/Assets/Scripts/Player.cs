@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Sprite _leftGunVisual;
-    [SerializeField] private Sprite _rightGunVisual;
+    [SerializeField] private GameObject _leftGunVisual;
+    [SerializeField] private GameObject _rightGunVisual;
     // Start is called before the first frame update
     
 
@@ -34,9 +34,17 @@ public class Player : MonoBehaviour
         if (targetPosition.x > Screen.width / 2)
         {
             // left gun visual
+            _leftGunVisual.SetActive(true);
+            _rightGunVisual.SetActive(false);
+            Vector3 pos = _leftGunVisual.transform.position;
+            _leftGunVisual.transform.position = new Vector3(targetPosition.x, pos.y, pos.z);
         }
         else
         {
+            _leftGunVisual.SetActive(false);
+            _rightGunVisual.SetActive(true);
+            Vector3 pos = _leftGunVisual.transform.position;
+            _rightGunVisual.transform.position = new Vector3(targetPosition.x, pos.y, pos.z);
             // right gun visual
         }
     }

@@ -47,7 +47,7 @@ public class Cat : Target
 
     void Move()
     {
-        transform.position = Vector2.left * speed * Time.deltaTime;
+        transform.position += transform.right * speed * Time.deltaTime;
     }
 
     void RandomizeMovement()

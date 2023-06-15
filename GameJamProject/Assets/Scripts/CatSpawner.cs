@@ -24,14 +24,15 @@ public class CatSpawner : MonoBehaviour
     {
         while(true)
         {
-            Cat c = _catPrefabs[Random.Range(0, _catPrefabs.Length)];
+            Cat cPref = _catPrefabs[Random.Range(0, _catPrefabs.Length)];
             int index = Random.Range(0, _spawnPoints.Length);
             Transform tr = _spawnPoints[index];
-            Target t = Instantiate(c, transform);
-            t.transform.SetPositionAndRotation(tr.position, tr.rotation);
-            if (index > 0)
+            Cat c = Instantiate(cPref, transform);
+            c.transform.SetPositionAndRotation(tr.position, tr.rotation);
+
+            if (false)
             {
-                t.transform.Rotate(new Vector3(0, 180, 0));
+               c.transform.Rotate(new Vector3(0, 180, 0));
             }
             // give back to TargetManager
 
