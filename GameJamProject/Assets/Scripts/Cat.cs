@@ -12,7 +12,7 @@ public class Cat : Target
 
     [SerializeField] float _minMoveChangeTime;
     [SerializeField] float _maxMoveChangeTime;
-    
+
     private float _speed = 0;
     private int _direction = 1;
     bool enableRandomization = true;
@@ -34,7 +34,7 @@ public class Cat : Target
         {
             _moveRandomizationRoutine = StartCoroutine(moveRandomizationRoutine());
         }
-        
+
     }
 
     // Update is called once per frame
@@ -46,9 +46,8 @@ public class Cat : Target
     public override void hit()
     {
         System.Random rnd = new System.Random();
-        int randomInt = rnd.Next(1,7);
+        int randomInt = rnd.Next(1, 6);
         FindObjectOfType<AudioManager>().Play("Cat hit" + randomInt);
-        FindObjectOfType<AudioManager>().PlayDelayed("Gun reload", 0.5f);
         // play sound
         // play anim ?
         // set score
@@ -64,13 +63,18 @@ public class Cat : Target
     private void Move()
     {
         transform.position += _direction * transform.right * _speed * Time.deltaTime;
+        if (GameController.outOfScreen(transform.position))
+        {
+            _score = 0;
+            die();
+        }
     }
 
     private IEnumerator moveRandomizationRoutine()
     {
         yield return new WaitForSeconds(_maxMoveChangeTime);
 
-        while(true)
+        while (true)
         {
 
             _speed = Random.Range(_minSpeed, _maxSpeed);

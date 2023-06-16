@@ -1,9 +1,5 @@
 
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Scripting.APIUpdating;
-using System.Collections;
-using System.Threading;
 
 public class Balloon : Target
 {
@@ -13,6 +9,15 @@ public class Balloon : Target
     private int frameCounter = 0;
     private int _direction = -1;
 
+    private void OnEnable()
+    {
+        GameController.gunShooting += onGunShooting;
+    }
+
+    private void OnDisable()
+    {
+        GameController.gunShooting -= onGunShooting;
+    }
 
     // Update is called once per frame
     void Update()
@@ -38,4 +43,10 @@ public class Balloon : Target
         transform.position += _direction * transform.up * _speed * Time.deltaTime;
         frameCounter++;
     }
+
+    private void onGunShooting(Vector2 position)
+    {
+        checkHit(position);
+    }
+
 }

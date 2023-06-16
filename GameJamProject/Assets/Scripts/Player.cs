@@ -7,12 +7,6 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject _leftGunVisual;
     [SerializeField] private GameObject _rightGunVisual;
     
-    private Vector3 _screenCenterPointWorldPosition;
-
-    private void Start()
-    {
-        _screenCenterPointWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
-    }
     private void Update()
     {
         Vector3 temp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -36,7 +30,7 @@ public class Player : MonoBehaviour
 
     private void MoveGun(Vector2 targetPosition)
     {
-        if (targetPosition.x < _screenCenterPointWorldPosition.x)
+        if (targetPosition.x < GameController.screenCenterPosX)
         {
             // left gun visual
             _leftGunVisual.SetActive(true);

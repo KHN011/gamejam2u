@@ -14,6 +14,7 @@ public class TargetControllerBase<T> : MonoBehaviour where T : Target
     private void OnEnable()
     {
         GameController.gunShooting += onGunShooting;
+        GameController.targetDied += onTargetDied;
     }
 
     private void OnDisable()
@@ -63,18 +64,18 @@ public class TargetControllerBase<T> : MonoBehaviour where T : Target
         // can safely remove elements in reverse mode
         for (int i = _targets.Count - 1; i > -1; i--)
         {
-            if (_targets[i].checkHit(hitPosition))
-            {
-                kill(_targets[i]);
-            }
+            _targets[i].checkHit(hitPosition);
         }
     }
+       
 
-    protected void kill(T target)
+    protected virtual void onTargetDied(Target t)
     {
-        GameController.targetDied?.Invoke(target);
-        _targets.Remove(target);
-        target.hit();
+        T temp = t as T;
+        if (_targets.Contains(temp) && temp != null)
+        {
+            _targets.Remove(temp);
+        }
     }
 
 }

@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    [SerializeField] private int _score = 0;
+    [SerializeField] protected int _score = 0;
     // size of target
-    [SerializeField] private float _radius = 0;
+    [SerializeField] protected float _radius = 0;
 
     public int Score { get => _score; }
 
@@ -13,19 +13,27 @@ public class Target : MonoBehaviour
         return new Vector2(transform.position.x, transform.position.y);
     }
 
-    public bool checkHit(Vector2 worldPos)
+    public void checkHit(Vector2 worldPos)
     {
-        return Vector2.Distance(worldPos, worldPosition()) < _radius;
+        if (Vector2.Distance(worldPos, worldPosition()) < _radius)
+        {
+            hit();
+        }
     }
-    
+
     public virtual void hit()
     {
-        // GetComponent<AudioSource>().Play();
-        Destroy(gameObject);
+        // play sound
+        // play anim ?
+        // set end ?
+        die();
     }
     
-    private void Update()
+
+    public virtual void die()
     {
-        // some movement
+        GameController.targetDied?.Invoke(this);
+        Destroy(gameObject);
     }
+   
 }
