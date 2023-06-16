@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
     private Coroutine _waitForCatDeathRoutine = null;
     private Coroutine _reloadRoutine = null;
 
-    public bool isPaused = false;
+    public static bool isPaused = false;
 
 
     private void Start()
@@ -61,7 +61,7 @@ public class GameController : MonoBehaviour
 
     public void startGame()
     {
-
+        isPaused = false;
         // give valid balloon transform
         _birdController.balloon = _balloon;
         _scoreController.resetScore();

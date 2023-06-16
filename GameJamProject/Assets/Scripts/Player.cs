@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
 
         MoveGun(mousePos2D);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !GameController.isPaused)
         {
             Fire(mousePos2D);
         }
