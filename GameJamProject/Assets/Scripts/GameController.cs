@@ -4,61 +4,37 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public static GameController Instance = null;
+    // public static GameController Instance = null;
 
-    [SerializeField] private CatSpawner _catSpawner;
+    [SerializeField] private CatController _catController;
+    [SerializeField] private BirdController _birdController;
 
-
-
-    private TargetManager _targetManager = null;
-
-    public System.Action<Vector2> onGunFiredAction;
-
-    private void Awake()
-    {
-        
-        if (Instance != this && Instance != null)
-        {
-            DestroyImmediate(this.gameObject);
-        }
-        
-        if (Instance == null)
-        {
-            Instance = this;
-
-            
-        }
-        init();
-    }
+    public static System.Action<Vector2> gunShooting;
+    public static System.Action<Target> targetCreated;
+    public static System.Action<Target> targetDied;
+    
 
     private void Start()
     {
         startGame();   
     }
 
-    private void init()
+    private void OnEnable()
     {
-        _targetManager = new TargetManager();
-        onGunFiredAction += onGunFired;
     }
+
 
     public void startGame()
     {
-        _catSpawner.startSpawnCats();
+        _birdController.startSpawn();
+        _catController.startSpawn();
     }
 
     public void endGame()
     {
-
+        _birdController.stopSpawn();
+        _catController.stopSpawn();
     }
 
-    private void onGunFired(Vector2 bulletPos)
-    {
-        _targetManager.checkHit(bulletPos);
-    }
-
-    public void addTarget(Target t)
-    {
-        _targetManager.createTarget(t);
-    }
+    
 }

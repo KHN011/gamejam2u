@@ -16,10 +16,10 @@ public class Target : MonoBehaviour
         return Vector2.Distance(worldPos, worldPosition()) < _radius;
     }
     
-    public void onShooted()
+    public void killed()
     {
-        // it deads
-        GetComponent<AudioSource>().Play();
+        // GetComponent<AudioSource>().Play();
+        Destroy(gameObject);
     }
     
     private void Update()
