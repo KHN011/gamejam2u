@@ -2632,7 +2632,6 @@ MonoBehaviour:
   _balloon: {fileID: 746124836}
   pauseScreen: {fileID: 2110552752}
   endScreen: {fileID: 377254388}
-  isPaused: 0
 --- !u!114 &1259867219
 MonoBehaviour:
   m_ObjectHideFlags: 0
