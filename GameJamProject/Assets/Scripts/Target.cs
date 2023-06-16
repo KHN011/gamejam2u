@@ -6,6 +6,8 @@ public class Target : MonoBehaviour
     // size of target
     [SerializeField] private float _radius = 0;
 
+    public int Score { get => _score; }
+
     public Vector2 worldPosition()
     {
         return new Vector2(transform.position.x, transform.position.y);
