@@ -1162,9 +1162,51 @@ MonoBehaviour:
   sounds:
   - name: Game Theme
     clip: {fileID: 8300000, guid: 5b3367e227e79ce4dbf00ceb12cfc30d, type: 3}
-    volume: 60
+    volume: 5
     pitch: 1.1
     loop: 1
+    source: {fileID: 0}
+  - name: Cat hit1
+    clip: {fileID: 8300000, guid: d78d9080088c12d4992e3df7846c6a1a, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cat hit2
+    clip: {fileID: 8300000, guid: 911d3766a5b46a748800205f62a084d0, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cat hit3
+    clip: {fileID: 8300000, guid: 9373439c27f2eca4fa2cafaa8aa84684, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cat hit4
+    clip: {fileID: 8300000, guid: 9e623af8507c36842a4baece32a6ae67, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cat hit5
+    clip: {fileID: 8300000, guid: 46262aea3fb1cb348a13a671fe4f06fa, type: 3}
+    volume: 100
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cat hit6
+    clip: {fileID: 8300000, guid: 3d08c091ced0c0b47bfedc4718759173, type: 3}
+    volume: 100
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Gun shot
+    clip: {fileID: 8300000, guid: b6744fd7a675a784faf4bbf9322f1068, type: 3}
+    volume: 80
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1011485591
 Transform:
@@ -1866,5 +1908,5 @@ Transform:
   - {fileID: 2081256743}
   - {fileID: 774182561}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

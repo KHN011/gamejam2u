@@ -46,7 +46,7 @@ public class Cat : Target
     public override void hit()
     {
         System.Random rnd = new System.Random();
-        int randomInt = rnd.Next(1,6);
+        int randomInt = rnd.Next(1,7);
         FindObjectOfType<AudioManager>().Play("Cat hit" + randomInt);
         // play sound
         // play anim ?
