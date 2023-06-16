@@ -40,8 +40,9 @@ public class Bird : Target
 
     public override void hit()
     {
-        // play sound
-        // play anim ?
+        System.Random rnd = new System.Random();
+        int randomInt = rnd.Next(1, 6);
+        AudioManager.instance.Play("Bird hit" + randomInt);
         base.hit();
     }
 

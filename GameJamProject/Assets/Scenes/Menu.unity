@@ -2493,6 +2493,30 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Bird hit1
+    clip: {fileID: 8300000, guid: ebb9832424f852941b48f7e843d18286, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bird hit2
+    clip: {fileID: 8300000, guid: 951deab837b677b46978d471fd7202af, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bird hit3
+    clip: {fileID: 8300000, guid: ebb9832424f852941b48f7e843d18286, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bird hit4
+    clip: {fileID: 8300000, guid: 22099d541aa3ce84ea4f47fd6baa6159, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &2129546685
 Transform:
   m_ObjectHideFlags: 0

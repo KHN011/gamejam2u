@@ -231,7 +231,7 @@ Transform:
   - {fileID: 636505803}
   - {fileID: 250061666}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &46183660
 GameObject:
@@ -704,7 +704,7 @@ RectTransform:
   - {fileID: 2110552753}
   - {fileID: 377254389}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -845,7 +845,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &377254388
 GameObject:
@@ -1040,7 +1040,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1132,7 +1132,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &591741838
 GameObject:
@@ -1732,7 +1732,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &746124836
 MonoBehaviour:
@@ -1783,7 +1783,7 @@ Transform:
   - {fileID: 624022372}
   - {fileID: 1742956024}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &760166359
 GameObject:
@@ -2098,7 +2098,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &955807230
 GameObject:
@@ -2235,117 +2235,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955807230}
   m_CullTransparentMesh: 1
---- !u!1 &1011485589
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1011485591}
-  - component: {fileID: 1011485590}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1011485590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011485589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e837d154555cc7c4dabfa5223d44959f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Game Theme
-    clip: {fileID: 8300000, guid: 5b3367e227e79ce4dbf00ceb12cfc30d, type: 3}
-    volume: 5
-    pitch: 1.1
-    loop: 1
-    source: {fileID: 0}
-  - name: Cat hit1
-    clip: {fileID: 8300000, guid: d78d9080088c12d4992e3df7846c6a1a, type: 3}
-    volume: 10
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Cat hit2
-    clip: {fileID: 8300000, guid: 911d3766a5b46a748800205f62a084d0, type: 3}
-    volume: 10
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Cat hit3
-    clip: {fileID: 8300000, guid: 9373439c27f2eca4fa2cafaa8aa84684, type: 3}
-    volume: 10
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Cat hit4
-    clip: {fileID: 8300000, guid: 9e623af8507c36842a4baece32a6ae67, type: 3}
-    volume: 10
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Cat hit5
-    clip: {fileID: 8300000, guid: 46262aea3fb1cb348a13a671fe4f06fa, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Cat hit6
-    clip: {fileID: 8300000, guid: 3d08c091ced0c0b47bfedc4718759173, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Gun shot
-    clip: {fileID: 8300000, guid: b6744fd7a675a784faf4bbf9322f1068, type: 3}
-    volume: 80
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Gun reload
-    clip: {fileID: 8300000, guid: 0f3175c0adef56d429e53c487b09befb, type: 3}
-    volume: 60
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Baloon pop
-    clip: {fileID: 8300000, guid: 240da77cb2dd5964f97f198c72ba081c, type: 3}
-    volume: 100
-    pitch: 0.8
-    loop: 0
-    source: {fileID: 0}
-  - name: Baloon deflate
-    clip: {fileID: 8300000, guid: b9352a371b23f6349ac6b3ae368daa63, type: 3}
-    volume: 60
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
---- !u!4 &1011485591
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011485589}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1189153926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2724,7 +2613,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1259867218
 MonoBehaviour:
@@ -3207,7 +3096,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1427929474
 GameObject:
@@ -3787,7 +3676,7 @@ Transform:
   - {fileID: 459721997}
   - {fileID: 599016630}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1902525727
 GameObject:
@@ -3821,7 +3710,7 @@ Transform:
   - {fileID: 1427929476}
   - {fileID: 777161804}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1902525729
 MonoBehaviour:
@@ -4000,5 +3889,5 @@ Transform:
   - {fileID: 2081256743}
   - {fileID: 774182561}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

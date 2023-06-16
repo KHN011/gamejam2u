@@ -47,10 +47,7 @@ public class Cat : Target
     {
         System.Random rnd = new System.Random();
         int randomInt = rnd.Next(1, 6);
-        FindObjectOfType<AudioManager>().Play("Cat hit" + randomInt);
-        // play sound
-        // play anim ?
-        // set score
+        AudioManager.instance.Play("Cat hit" + randomInt);
         base.hit();
     }
 

@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
     private void Fire(Vector2 targetPosition)
     {
-        FindObjectOfType<AudioManager>().Play("Gun shot");
+        AudioManager.instance.Play("Gun shot");
         GameController.gunTriggerPulling?.Invoke(targetPosition);
         // via GameController _targetManager.checkHit(mousePos2D);
         // play sound
