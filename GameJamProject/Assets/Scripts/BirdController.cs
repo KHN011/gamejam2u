@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class BirdController : TargetControllerBase<Bird>
 {
-
+    
     public Target balloon;
+
+
     protected override void createTarget()
     {
         base.createTarget();
 
         _targets[_targets.Count - 1].setBalloon(balloon.transform);
     }
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         if (balloon != null)
         {
             foreach (var bird in _targets)
@@ -29,5 +32,4 @@ public class BirdController : TargetControllerBase<Bird>
         }
             
     }
-
 }

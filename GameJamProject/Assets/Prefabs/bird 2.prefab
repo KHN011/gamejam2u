@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _score: 1
   _radius: 0.7
-  _minSpeed: 0.2
-  _maxSpeed: 0.4
+  _minSpeed: 0.1
+  _maxSpeed: 0.25
   _minMoveChangeTime: 0.5
   _maxMoveChangeTime: 3

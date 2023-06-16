@@ -5,9 +5,11 @@ using UnityEngine;
 public class TargetControllerBase<T> : MonoBehaviour where T : Target
 {
     [SerializeField] protected float _spawnFrequency = 5;
+    [SerializeField] private float _speedUpTimeThreshold = 5f;
     [SerializeField] protected T[] _prefabs;
     [SerializeField] protected Transform[] _spawnPoints;
 
+    private float _timeCounter = 0;
     protected Coroutine _spawnRoutine = null;
     protected List<T> _targets = new List<T>();
 
@@ -76,6 +78,17 @@ public class TargetControllerBase<T> : MonoBehaviour where T : Target
         if (_targets.Contains(temp) && temp != null)
         {
             _targets.Remove(temp);
+        }
+    }
+
+    protected virtual void Update()
+    {
+        _timeCounter += Time.deltaTime;
+
+        if (_timeCounter > _speedUpTimeThreshold)
+        {
+            _spawnFrequency *= 0.7f;
+            _timeCounter = 0f;
         }
     }
 
