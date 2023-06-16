@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private BirdController _birdController;
     [SerializeField] private Balloon _balloon;
     [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private GameObject endScreen;
     
     private ScoreController _scoreController;
     private BulletController _bulletController;
@@ -35,6 +36,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         pauseScreen.SetActive(false);
+        endScreen.SetActive(false);
 
         _scoreController = GetComponent<ScoreController>();
         _bulletController = GetComponent<BulletController>();
@@ -74,6 +76,7 @@ public class GameController : MonoBehaviour
         _birdController.stopSpawn();
         _catController.stopSpawn();
         Debug.Log("end game");
+        endScreen.SetActive(true);
     }
 
        private void onTargetDied(Target t)
