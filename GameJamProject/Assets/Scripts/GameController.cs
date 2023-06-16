@@ -42,6 +42,7 @@ public class GameController : MonoBehaviour
     {
         // give valid balloon transform
         _birdController.balloon = _balloon;
+        GetComponent<ScoreController>().resetScore();
         _birdController.startSpawn();
         _catController.startSpawn();
     }
