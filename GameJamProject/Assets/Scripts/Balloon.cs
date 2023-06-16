@@ -4,9 +4,9 @@ using UnityEngine;
 public class Balloon : Target
 {
     [SerializeField] float _speed;
-    [SerializeField] float _framesToSwitch = 2000;
+    [SerializeField] float _timeToSwitchSec = 2;
     
-    private int frameCounter = 0;
+    private float timeCounter = 0;
     private int _direction = -1;
 
     private void OnEnable()
@@ -37,13 +37,14 @@ public class Balloon : Target
 
     private void Move()
     {
-        if(frameCounter >= _framesToSwitch)
+        timeCounter += Time.deltaTime;
+        if (timeCounter >= _timeToSwitchSec)
         {
             _direction *= -1;
-            frameCounter = 0;
+            timeCounter = 0;
         }
         transform.position += _direction * transform.up * _speed * Time.deltaTime;
-        frameCounter++;
+        
     }
 
     private void onGunShooting(Vector2 position)
