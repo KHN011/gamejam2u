@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
             _rightGunVisual.SetActive(false);
             Vector3 pos = _leftGunVisual.transform.position;
             
-            _leftGunVisual.transform.position = new Vector3(targetPosition.x, pos.y, pos.z);
+            _leftGunVisual.transform.position = new Vector3(targetPosition.x * 0.3f, pos.y, pos.z);
         }
         else
         {
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
             _leftGunVisual.SetActive(false);
             _rightGunVisual.SetActive(true);
             Vector3 pos = _leftGunVisual.transform.position;
-            _rightGunVisual.transform.position = new Vector3(targetPosition.x, pos.y, pos.z);
+            _rightGunVisual.transform.position = new Vector3(targetPosition.x * 0.3f, pos.y, pos.z);
             
         }
     }

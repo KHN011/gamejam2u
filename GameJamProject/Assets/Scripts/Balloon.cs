@@ -30,6 +30,9 @@ public class Balloon : Target
         // play sound
         // play anim ?
         // set end ?
+        AudioManager am = FindObjectOfType<AudioManager>();
+        am.PlayDelayed("Baloon pop", 0.1f);
+        am.PlayDelayed("Baloon deflate", 0.2f);
         base.hit();
     }
 
