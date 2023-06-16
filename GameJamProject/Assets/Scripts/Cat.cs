@@ -7,36 +7,48 @@ using System.Threading;
 
 public class Cat : Target
 {
-    [SerializeField] float speed;
-    bool enableRandomization = false;
-    bool facingLeft;
+    [SerializeField] float _minSpeed;
+    [SerializeField] float _maxSpeed;
 
+    [SerializeField] float _minMoveChangeTime;
+    [SerializeField] float _maxMoveChangeTime;
+    
+    private float _speed = 0;
+    private int _direction = 1;
+    bool enableRandomization = true;
+
+    private Coroutine _moveRandomizationRoutine = null;
 
     // Start is called before the first frame update
     void Start()
     {
         //const float waitTime = 2.0f;
         //StartCoroutine(WaitAndPrint(waitTime));
+        _speed = _maxSpeed;
+        if (_moveRandomizationRoutine != null)
+        {
+            StopCoroutine(_moveRandomizationRoutine);
+        }
+
+        if (enableRandomization)
+        {
+            _moveRandomizationRoutine = StartCoroutine(moveRandomizationRoutine());
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
-
-        if (enableRandomization)
-        {            
-            RandomizeMovement();
-        }
-        
     }
 
-    public void onShooted()
+    public override void hit()
     {
         // play sound
         // play anim ?
         // set score
-        Destroy(gameObject);
+        base.hit();
     }
 
     private IEnumerator WaitAndPrint(float waitTime)
@@ -45,13 +57,23 @@ public class Cat : Target
         enableRandomization = true;
     }
 
-    void Move()
+    private void Move()
     {
-        transform.position += transform.right * speed * Time.deltaTime;
+        transform.position += _direction * transform.right * _speed * Time.deltaTime;
     }
 
-    void RandomizeMovement()
+    private IEnumerator moveRandomizationRoutine()
     {
+        yield return new WaitForSeconds(_maxMoveChangeTime);
 
+        while(true)
+        {
+
+            _speed = Random.Range(_minSpeed, _maxSpeed);
+
+            // zero is waiting
+            _direction = Random.Range(0, 3) - 1;
+            yield return new WaitForSeconds(Random.Range(_minMoveChangeTime, _maxMoveChangeTime));
+        }
     }
 }

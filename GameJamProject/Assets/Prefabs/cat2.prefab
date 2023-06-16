@@ -48,7 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _score: 1
   _radius: 1
-  speed: 1
+  _minSpeed: 2
+  _maxSpeed: 3
+  _minMoveChangeTime: 2
+  _maxMoveChangeTime: 4
 --- !u!82 &7157221650686043978
 AudioSource:
   m_ObjectHideFlags: 0

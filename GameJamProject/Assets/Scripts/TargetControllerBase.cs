@@ -74,7 +74,7 @@ public class TargetControllerBase<T> : MonoBehaviour where T : Target
     {
         GameController.targetDied?.Invoke(target);
         _targets.Remove(target);
-        target.killed();
+        target.hit();
     }
 
 }

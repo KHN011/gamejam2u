@@ -18,7 +18,7 @@ public class Target : MonoBehaviour
         return Vector2.Distance(worldPos, worldPosition()) < _radius;
     }
     
-    public void killed()
+    public virtual void hit()
     {
         // GetComponent<AudioSource>().Play();
         Destroy(gameObject);
