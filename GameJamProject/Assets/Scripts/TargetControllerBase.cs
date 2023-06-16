@@ -27,6 +27,7 @@ public class TargetControllerBase<T> : MonoBehaviour where T : Target
         if (_spawnRoutine != null)
         {
             StopCoroutine(_spawnRoutine);
+            _spawnRoutine = null;
         }
         _spawnRoutine = StartCoroutine(spawnRoutine());
     }

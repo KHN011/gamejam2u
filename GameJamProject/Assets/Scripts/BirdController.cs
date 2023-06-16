@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BirdController : TargetControllerBase<Bird>
 {
+
     public Target balloon;
     protected override void createTarget()
     {
@@ -28,4 +29,5 @@ public class BirdController : TargetControllerBase<Bird>
         }
             
     }
+
 }

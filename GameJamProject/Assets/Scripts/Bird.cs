@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bird : Target
 {
+
     [SerializeField] float _minSpeed;
     [SerializeField] float _maxSpeed;
 
@@ -16,7 +17,6 @@ public class Bird : Target
 
     private Coroutine _moveRandomizationRoutine = null;
 
-    // Start is called before the first frame update
     void Start()
     {
         //const float waitTime = 2.0f;
@@ -68,6 +68,7 @@ public class Bird : Target
         _balloonTransform = balloonTr;
 
         _direction = balloonTr.position - transform.position;
-        // _directionAngleDeg = Mathf.Rad2Deg * Mathf.Atan(_direction.y / _direction.x);
+        Move();
     }
+
 }
