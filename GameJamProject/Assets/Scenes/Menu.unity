@@ -640,8 +640,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b392a9dfb5b7d134a80465aa4ff9643f, type: 2}
-  m_sharedMaterial: {fileID: 6675818692199576676, guid: b392a9dfb5b7d134a80465aa4ff9643f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ee620586e0a788542a5b35c82314cb5c, type: 2}
+  m_sharedMaterial: {fileID: 4973627339247722004, guid: ee620586e0a788542a5b35c82314cb5c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1459,8 +1459,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: How to play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b392a9dfb5b7d134a80465aa4ff9643f, type: 2}
-  m_sharedMaterial: {fileID: 6675818692199576676, guid: b392a9dfb5b7d134a80465aa4ff9643f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ee620586e0a788542a5b35c82314cb5c, type: 2}
+  m_sharedMaterial: {fileID: 4973627339247722004, guid: ee620586e0a788542a5b35c82314cb5c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1603,13 +1603,13 @@ MonoBehaviour:
 
     Shoot
     the birds down before they reach the balloon. They are worth 1 point each. You
-    have 6 bullets, and you can reload only by shooting down a cat, but it''s worth
-    -2 points.
+    have 6 bullets, and you can reload only by shooting down a cat, but you lose
+    2 points.
 
     Collect as many points as possible while saving the balloon.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b392a9dfb5b7d134a80465aa4ff9643f, type: 2}
-  m_sharedMaterial: {fileID: 6675818692199576676, guid: b392a9dfb5b7d134a80465aa4ff9643f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ee620586e0a788542a5b35c82314cb5c, type: 2}
+  m_sharedMaterial: {fileID: 4973627339247722004, guid: ee620586e0a788542a5b35c82314cb5c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2258,8 +2258,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b392a9dfb5b7d134a80465aa4ff9643f, type: 2}
-  m_sharedMaterial: {fileID: 6675818692199576676, guid: b392a9dfb5b7d134a80465aa4ff9643f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ee620586e0a788542a5b35c82314cb5c, type: 2}
+  m_sharedMaterial: {fileID: 4973627339247722004, guid: ee620586e0a788542a5b35c82314cb5c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2393,8 +2393,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b392a9dfb5b7d134a80465aa4ff9643f, type: 2}
-  m_sharedMaterial: {fileID: 6675818692199576676, guid: b392a9dfb5b7d134a80465aa4ff9643f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ee620586e0a788542a5b35c82314cb5c, type: 2}
+  m_sharedMaterial: {fileID: 4973627339247722004, guid: ee620586e0a788542a5b35c82314cb5c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
