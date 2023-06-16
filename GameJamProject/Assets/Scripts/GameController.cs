@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private CatController _catController;
     [SerializeField] private BirdController _birdController;
     [SerializeField] private Balloon _balloon;
+    [SerializeField] private GameObject pauseScreen;
     
     private ScoreController _scoreController;
     private BulletController _bulletController;
@@ -27,9 +29,12 @@ public class GameController : MonoBehaviour
     private Coroutine _waitForCatDeathRoutine = null;
     private Coroutine _reloadRoutine = null;
 
+    public bool isPaused = false;
+
 
     private void Start()
     {
+        pauseScreen.SetActive(false);
 
         _scoreController = GetComponent<ScoreController>();
         _bulletController = GetComponent<BulletController>();
@@ -151,5 +156,31 @@ public class GameController : MonoBehaviour
             || position.y > screenTopPosY || position.y < screenBottomPosY);
     }
 
-    
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            onPause();
+        }
+    }
+
+    public void onPause()
+    {
+        pauseScreen.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    public void onResume()
+    {
+        pauseScreen.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+
+    public void onLoadMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
 }
