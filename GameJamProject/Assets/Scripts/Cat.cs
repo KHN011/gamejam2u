@@ -49,15 +49,15 @@ public class Cat : Target
     {
         System.Random rnd = new System.Random();
         int randomInt = rnd.Next(1, 6);
-<<<<<<< Updated upstream
+
         AudioManager.instance.Play("Cat hit" + randomInt);
-=======
-        FindObjectOfType<AudioManager>().Stop("Cat purr");
-        FindObjectOfType<AudioManager>().Play("Cat hit" + randomInt);
+
+        AudioManager.instance.Stop("Cat purr");
+        AudioManager.instance.Play("Cat hit" + randomInt);
         // play sound
         // play anim ?
         // set score
->>>>>>> Stashed changes
+
         base.hit();
     }
 

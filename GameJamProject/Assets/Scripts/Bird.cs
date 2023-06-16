@@ -31,7 +31,7 @@ public class Bird : Target
 
         System.Random rnd = new System.Random();
         int randomInt = rnd.Next(1, 4);
-        if (randomInt < 3) FindObjectOfType<AudioManager>().PlayDelayed("Duck quack" + randomInt, 0.5f);
+        if (randomInt < 3) AudioManager.instance.PlayDelayed("Duck quack" + randomInt, 0.5f);
     }
 
     // Update is called once per frame
