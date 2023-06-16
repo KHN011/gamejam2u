@@ -6,10 +6,13 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private GameObject _leftGunVisual;
     [SerializeField] private GameObject _rightGunVisual;
-    // Start is called before the first frame update
     
+    private Vector3 _screenCenterPointWorldPosition;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        _screenCenterPointWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
+    }
     private void Update()
     {
         Vector3 temp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -32,7 +35,7 @@ public class Player : MonoBehaviour
 
     private void MoveGun(Vector2 targetPosition)
     {
-        if (targetPosition.x > Screen.width / 2)
+        if (targetPosition.x < _screenCenterPointWorldPosition.x)
         {
             // left gun visual
             _leftGunVisual.SetActive(true);
@@ -43,11 +46,13 @@ public class Player : MonoBehaviour
         }
         else
         {
+            // right gun visual
             _leftGunVisual.SetActive(false);
             _rightGunVisual.SetActive(true);
             Vector3 pos = _leftGunVisual.transform.position;
             _rightGunVisual.transform.position = new Vector3(targetPosition.x, pos.y, pos.z);
-            // right gun visual
+            
         }
     }
+
 }
