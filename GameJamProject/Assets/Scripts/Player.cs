@@ -24,8 +24,6 @@ public class Player : MonoBehaviour
     {
         AudioManager.instance.Play("Gun shot");
         GameController.gunTriggerPulling?.Invoke(targetPosition);
-        // via GameController _targetManager.checkHit(mousePos2D);
-        // play sound
     }
 
     private void MoveGun(Vector2 targetPosition)

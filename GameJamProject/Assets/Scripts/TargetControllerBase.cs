@@ -22,6 +22,7 @@ public class TargetControllerBase<T> : MonoBehaviour where T : Target
     private void OnDisable()
     {
         GameController.gunShooting -= onGunShooting;
+        GameController.targetDied -= onTargetDied;
     }
 
     public void startSpawn()

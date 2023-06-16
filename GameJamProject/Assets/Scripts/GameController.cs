@@ -55,7 +55,7 @@ public class GameController : MonoBehaviour
     private void OnDisable()
     {
         targetDied -= onTargetDied;
-        gunTriggerPulling += onGunTriggerPulling;
+        gunTriggerPulling -= onGunTriggerPulling;
     }
 
 
@@ -101,6 +101,7 @@ public class GameController : MonoBehaviour
 
     private void onGunTriggerPulling(Vector2 pos)
     {
+        Debug.Log("trigger");
         if (_bulletController.remainingBullets() > 0)
         {
             gunShooting?.Invoke(pos);

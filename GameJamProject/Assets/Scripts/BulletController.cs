@@ -32,7 +32,7 @@ public class BulletController : MonoBehaviour
 
         foreach (var bullet in _bullets)
         {
-            if (bullet.activeInHierarchy)
+            if (bullet && bullet.activeInHierarchy)
             {
                 lastActive = bullet;
             }
