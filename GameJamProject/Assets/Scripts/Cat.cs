@@ -35,7 +35,7 @@ public class Cat : Target
             _moveRandomizationRoutine = StartCoroutine(moveRandomizationRoutine());
         }
 
-        FindObjectOfType<AudioManager>().PlayDelayed("Cat purr", 0.5f);
+        AudioManager.instance.PlayDelayed("Cat purr", 0.5f);
 
     }
 
@@ -49,15 +49,12 @@ public class Cat : Target
     {
         System.Random rnd = new System.Random();
         int randomInt = rnd.Next(1, 6);
-<<<<<<< Updated upstream
+        
+        AudioManager.instance.Stop("Cat purr");
         AudioManager.instance.Play("Cat hit" + randomInt);
-=======
-        FindObjectOfType<AudioManager>().Stop("Cat purr");
-        FindObjectOfType<AudioManager>().Play("Cat hit" + randomInt);
         // play sound
         // play anim ?
         // set score
->>>>>>> Stashed changes
         base.hit();
     }
 
@@ -94,6 +91,6 @@ public class Cat : Target
 
     void Stop()
     {
-        FindObjectOfType<AudioManager>().Stop("Cat purr");
+        AudioManager.instance.Stop("Cat purr");
     }
 }

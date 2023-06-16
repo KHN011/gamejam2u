@@ -123,6 +123,141 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &16713219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 16713221}
+  - component: {fileID: 16713220}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &16713220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16713219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e837d154555cc7c4dabfa5223d44959f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Game Theme
+    clip: {fileID: 8300000, guid: 5b3367e227e79ce4dbf00ceb12cfc30d, type: 3}
+    volume: 5
+    pitch: 1.1
+    loop: 1
+    source: {fileID: 0}
+  - name: Cat purr
+    clip: {fileID: 8300000, guid: c2b32dd7b3c69fb4685a82ada24bbe8e, type: 3}
+    volume: 60
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cat hit1
+    clip: {fileID: 8300000, guid: d78d9080088c12d4992e3df7846c6a1a, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cat hit2
+    clip: {fileID: 8300000, guid: 911d3766a5b46a748800205f62a084d0, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cat hit3
+    clip: {fileID: 8300000, guid: 9373439c27f2eca4fa2cafaa8aa84684, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cat hit4
+    clip: {fileID: 8300000, guid: 9e623af8507c36842a4baece32a6ae67, type: 3}
+    volume: 10
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cat hit5
+    clip: {fileID: 8300000, guid: 46262aea3fb1cb348a13a671fe4f06fa, type: 3}
+    volume: 100
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cat hit6
+    clip: {fileID: 8300000, guid: 3d08c091ced0c0b47bfedc4718759173, type: 3}
+    volume: 100
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Gun shot
+    clip: {fileID: 8300000, guid: b6744fd7a675a784faf4bbf9322f1068, type: 3}
+    volume: 80
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Gun reload
+    clip: {fileID: 8300000, guid: 0f3175c0adef56d429e53c487b09befb, type: 3}
+    volume: 60
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Baloon pop
+    clip: {fileID: 8300000, guid: 240da77cb2dd5964f97f198c72ba081c, type: 3}
+    volume: 100
+    pitch: 0.8
+    loop: 0
+    source: {fileID: 0}
+  - name: Baloon deflate
+    clip: {fileID: 8300000, guid: b9352a371b23f6349ac6b3ae368daa63, type: 3}
+    volume: 60
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Duck quack1
+    clip: {fileID: 8300000, guid: 2e319d0def0ba6d4eb5e7d0eec53080d, type: 3}
+    volume: 40
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Duck quack2
+    clip: {fileID: 8300000, guid: 888a6050833b7bf459fd0d14058a19d8, type: 3}
+    volume: 40
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Duck laugh
+    clip: {fileID: 8300000, guid: 6cffa426bec851e43a59a3f076e94cb6, type: 3}
+    volume: 80
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &16713221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16713219}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &63673119
 GameObject:
   m_ObjectHideFlags: 0
@@ -2409,129 +2544,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945723165}
   m_CullTransparentMesh: 1
---- !u!1 &2129546683
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2129546685}
-  - component: {fileID: 2129546684}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2129546684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129546683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e837d154555cc7c4dabfa5223d44959f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Game Theme
-    clip: {fileID: 8300000, guid: 5b3367e227e79ce4dbf00ceb12cfc30d, type: 3}
-    volume: 5
-    pitch: 1.1
-    loop: 1
-    source: {fileID: 0}
-  - name: Cat hit1
-    clip: {fileID: 8300000, guid: d78d9080088c12d4992e3df7846c6a1a, type: 3}
-    volume: 10
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Cat hit2
-    clip: {fileID: 8300000, guid: 911d3766a5b46a748800205f62a084d0, type: 3}
-    volume: 10
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Cat hit3
-    clip: {fileID: 8300000, guid: 9373439c27f2eca4fa2cafaa8aa84684, type: 3}
-    volume: 10
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Cat hit4
-    clip: {fileID: 8300000, guid: 9e623af8507c36842a4baece32a6ae67, type: 3}
-    volume: 10
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Cat hit5
-    clip: {fileID: 8300000, guid: 46262aea3fb1cb348a13a671fe4f06fa, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Cat hit6
-    clip: {fileID: 8300000, guid: 3d08c091ced0c0b47bfedc4718759173, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Gun shot
-    clip: {fileID: 8300000, guid: b6744fd7a675a784faf4bbf9322f1068, type: 3}
-    volume: 80
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Gun reload
-    clip: {fileID: 8300000, guid: 0f3175c0adef56d429e53c487b09befb, type: 3}
-    volume: 60
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Bird hit1
-    clip: {fileID: 8300000, guid: ebb9832424f852941b48f7e843d18286, type: 3}
-    volume: 10
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Bird hit2
-    clip: {fileID: 8300000, guid: 951deab837b677b46978d471fd7202af, type: 3}
-    volume: 10
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Bird hit3
-    clip: {fileID: 8300000, guid: ebb9832424f852941b48f7e843d18286, type: 3}
-    volume: 10
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Bird hit4
-    clip: {fileID: 8300000, guid: 22099d541aa3ce84ea4f47fd6baa6159, type: 3}
-    volume: 10
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
---- !u!4 &2129546685
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129546683}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2137716884
 GameObject:
   m_ObjectHideFlags: 0
