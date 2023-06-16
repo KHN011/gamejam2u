@@ -27,13 +27,10 @@ public class Balloon : Target
 
     public override void hit()
     {
-        AudioManager am = AudioManager.instance;
-        am.PlayDelayed("Baloon pop", 0.1f);
-        am.PlayDelayed("Baloon deflate", 0.2f);
-
-        am.PlayDelayed("Baloon pop", 0.1f);
-        am.PlayDelayed("Baloon deflate", 0.1f);
-        am.PlayDelayed("Duck laugh", 1.5f);
+        
+        AudioManager.instance.PlayDelayed("Baloon pop", 0.1f);
+        AudioManager.instance.PlayDelayed("Baloon deflate", 0.2f);
+        AudioManager.instance.PlayDelayed("Duck laugh", 1.5f);
 
         base.hit();
     }
