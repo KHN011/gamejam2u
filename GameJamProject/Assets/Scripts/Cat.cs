@@ -49,8 +49,8 @@ public class Cat : Target
     {
         System.Random rnd = new System.Random();
         int randomInt = rnd.Next(1, 6);
-         AudioManager.instance..Stop("Cat purr");
-         AudioManager.instance..Play("Cat hit" + randomInt);
+        AudioManager.instance.Stop("Cat purr");
+        AudioManager.instance.Play("Cat hit" + randomInt);
         // play sound
         // play anim ?
         // set score?
