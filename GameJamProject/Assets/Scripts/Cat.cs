@@ -48,6 +48,7 @@ public class Cat : Target
         System.Random rnd = new System.Random();
         int randomInt = rnd.Next(1,7);
         FindObjectOfType<AudioManager>().Play("Cat hit" + randomInt);
+        FindObjectOfType<AudioManager>().PlayDelayed("Gun reload", 0.5f);
         // play sound
         // play anim ?
         // set score

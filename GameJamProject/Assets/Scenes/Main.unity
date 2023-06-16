@@ -1256,6 +1256,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Gun reload
+    clip: {fileID: 8300000, guid: 0f3175c0adef56d429e53c487b09befb, type: 3}
+    volume: 60
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1011485591
 Transform:
   m_ObjectHideFlags: 0
