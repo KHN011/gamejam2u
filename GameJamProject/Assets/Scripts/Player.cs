@@ -7,6 +7,15 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject _leftGunVisual;
     [SerializeField] private GameObject _rightGunVisual;
     
+    private static int REVEIVERSIZE = 6;
+    private int _bulletNumber;
+    private Vector3 _screenCenterPointWorldPosition;
+
+    private void Start()
+    {
+        _screenCenterPointWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
+        _bulletNumber = REVEIVERSIZE;
+    }
     private void Update()
     {
         Vector3 temp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -18,14 +27,29 @@ public class Player : MonoBehaviour
         {
             Fire(mousePos2D);
         }
+        if(Input.GetMouseButtonDown(1))
+        {
+            Reload();
+        }
     }
 
     private void Fire(Vector2 targetPosition)
     {
         FindObjectOfType<AudioManager>().Play("Gun shot");
         GameController.gunShooting.Invoke(targetPosition);
+        if(_bulletNumber > 0)
+        {
+            _bulletNumber--;
+            FindObjectOfType<AudioManager>().Play("Gun shot");
+            GameController.gunShooting.Invoke(targetPosition);
+        }
         // via GameController _targetManager.checkHit(mousePos2D);
         // play sound
+    }
+
+    public void Reload()
+    {
+        _bulletNumber = REVEIVERSIZE;
     }
 
     private void MoveGun(Vector2 targetPosition)

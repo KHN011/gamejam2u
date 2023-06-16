@@ -16,6 +16,7 @@ public class Cat : Target
     private float _speed = 0;
     private int _direction = 1;
     bool enableRandomization = true;
+    private Player _playerObject;
 
     private Coroutine _moveRandomizationRoutine = null;
 
@@ -25,6 +26,8 @@ public class Cat : Target
         //const float waitTime = 2.0f;
         //StartCoroutine(WaitAndPrint(waitTime));
         _speed = _maxSpeed;
+        _playerObject = FindObjectOfType<Player>();
+
         if (_moveRandomizationRoutine != null)
         {
             StopCoroutine(_moveRandomizationRoutine);
@@ -51,6 +54,7 @@ public class Cat : Target
         // play sound
         // play anim ?
         // set score
+        _playerObject.Reload();
         base.hit();
     }
 
