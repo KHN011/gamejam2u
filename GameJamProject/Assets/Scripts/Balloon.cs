@@ -8,6 +8,7 @@ using System.Threading;
 public class Balloon : Target
 {
     [SerializeField] float _speed;
+    [SerializeField] float _framesToSwitch = 2000;
     
     private int frameCounter = 0;
     private int _direction = -1;
@@ -29,7 +30,7 @@ public class Balloon : Target
 
     private void Move()
     {
-        if(frameCounter >= 2000)
+        if(frameCounter >= _framesToSwitch)
         {
             _direction *= -1;
             frameCounter = 0;
