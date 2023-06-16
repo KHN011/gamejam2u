@@ -27,12 +27,9 @@ public class Balloon : Target
 
     public override void hit()
     {
-        // play sound
-        // play anim ?
-        // set end ?
         AudioManager am = FindObjectOfType<AudioManager>();
-        am.PlayDelayed("Baloon pop", 0.1f);
-        am.PlayDelayed("Baloon deflate", 0.2f);
+        AudioManager.instance.PlayDelayed("Baloon pop", 0.1f);
+        AudioManager.instance.PlayDelayed("Baloon deflate", 0.2f);
         base.hit();
     }
 

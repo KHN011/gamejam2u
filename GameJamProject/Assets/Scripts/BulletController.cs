@@ -17,7 +17,7 @@ public class BulletController : MonoBehaviour
         int counter = 0;
         foreach (var bullet in _bullets)
         {
-            if (bullet.activeInHierarchy)
+            if (bullet && bullet.activeInHierarchy)
             {
                 counter++;
             }
